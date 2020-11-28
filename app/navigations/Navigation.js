@@ -69,7 +69,7 @@ function screenOptions(route, color) {
       iconName = "book";
       break;
     case "promedios":
-      iconName = "chart-box";
+      iconName = "chart-bar";
       break;
     default:
       break;
