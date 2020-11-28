@@ -1,45 +1,80 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import Alumnos from "../screens/Alumno";
-import Grupos from "../screens/Grupo";
-import Maestros from "../screens/Maestro";
-import Materias from "../screens/Materia";
-import Promedios from "../screens/Promedio";
+import { Icon } from "react-native-elements";
+import AlumnosStack from "./AlumnoStack";
+import GruposStack from "./GrupoStack";
+import MaestrosStack from "./MaestroStack";
+import MateriasStack from "./MateriaStack";
+import PromediosStack from "./PromedioStack";
 
 const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        initialRouteName="restaurants"
+        tabBarOptions={{
+          inactiveTintColor: "#646464",
+          activeTintColor: "#00a680"
+        }}
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ color }) => screenOptions(route, color)
+        })}
+      >
         <Tab.Screen
           name="alumnos"
-          component={Alumnos}
+          component={AlumnosStack}
           options={{ title: "Alumnos" }}
         />
         <Tab.Screen
           name="grupos"
-          component={Grupos}
+          component={GruposStack}
           options={{ title: "Grupos" }}
         />
         <Tab.Screen
           name="maestros"
-          component={Maestros}
+          component={MaestrosStack}
           options={{ title: "Maestros" }}
         />
         <Tab.Screen
           name="materias"
-          component={Materias}
+          component={MateriasStack}
           options={{ title: "Materias" }}
         />
         <Tab.Screen
           name="promedios"
-          component={Promedios}
+          component={PromediosStack}
           options={{ title: "Promedios" }}
         />
       </Tab.Navigator>
     </NavigationContainer>
+  );
+}
+function screenOptions(route, color) {
+  let iconName;
+
+  switch (route.name) {
+    case "alumnos":
+      iconName = "account";
+      break;
+    case "grupos":
+      iconName = "account-group";
+      break;
+    case "maestros":
+      iconName = "account-check";
+      break;
+    case "materias":
+      iconName = "book";
+      break;
+    case "promedios":
+      iconName = "chart-box";
+      break;
+    default:
+      break;
+  }
+  return (
+    <Icon type="material-community" name={iconName} size={22} color={color} />
   );
 }
