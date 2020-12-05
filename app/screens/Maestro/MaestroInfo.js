@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function Maestro() {
+export default function MaestroInfo() {
   return (
     <View>
-      <Text>Maestros ...</Text>
+      <Text>DETALLE DE MAESTRO</Text>
     </View>
   );
 }
