@@ -16,6 +16,18 @@ export default function Maestro() {
           containerStyle={styles.btnContainer}
           onPress={() => navigation.navigate("maestros-add")}
         />
+        <Button
+          title="Maestro Lista 1"
+          buttonStyle={styles.btnStyle}
+          containerStyle={styles.btnContainer}
+          onPress={() => navigation.navigate("maestros-info")}
+        />
+        <Button
+          title="Maestro Lista 2"
+          buttonStyle={styles.btnStyle}
+          containerStyle={styles.btnContainer}
+          onPress={() => navigation.navigate("maestros-list")}
+        />
       </View>
 
       {list.map((item, i) => (
@@ -43,17 +55,16 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold"
   },
-  btnAddMaestro: {
-    marginBottom: 5
-  },
   btnStyle: {
-    backgroundColor: "#00a680"
+    backgroundColor: "#00a680",
+    marginBottom: 10
   },
   btnContainer: {
     width: "70%"
   },
   viewBtn: {
-    flex: 6,
+    flex: 1,
+    justifyContent: "flex-start",
     alignItems: "center"
   }
 });
@@ -65,6 +76,14 @@ const list = [
   },
   {
     title: "Maestro 2",
+    icon: "account-outline"
+  },
+  {
+    title: "Maestro 3",
+    icon: "account"
+  },
+  {
+    title: "Maestro 4",
     icon: "account-outline"
   }
 ];
