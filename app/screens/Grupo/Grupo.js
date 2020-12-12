@@ -30,6 +30,13 @@ export default function Grupo() {
         onPress={() => navigation.navigate("grupos-det")}
       />
 
+      <Button
+        title="Lista de grupo"
+        buttonStyle={styles.btnStyle}
+        containerStyle={styles.btnContainer}
+        onPress={() => navigation.navigate("grupos-list")}
+      />
+
     </View>
   );
 }
