@@ -1,6 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Grupos from "../screens/Grupo";
+import Grupos from "../screens/Grupo/Grupo";
 
 const Stack = createStackNavigator();
 

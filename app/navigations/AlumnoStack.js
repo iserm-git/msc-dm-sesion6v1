@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleSheet } from "react-native"
 import { createStackNavigator } from "@react-navigation/stack";
 import Alumnos from "../screens/Alumno/Alumno";
 import AlumnosAdd from "../screens/Alumno/AlumnoAdd";
@@ -15,7 +16,15 @@ export default function AlumnosStack() {
       <Stack.Screen
         name="alumnos"
         component={Alumnos}
-        options={{ title: "Alumnos" }}
+        options={{
+          title: "Alumnos",
+          headerStyle: {
+            backgroundColor: '#00a680',
+          }
+        }}
+        navigationOptions={
+          { headerStyle: styles.headStyle }
+        }
       />
       <Stack.Screen
         name="alumnos-add"
@@ -40,3 +49,10 @@ export default function AlumnosStack() {
     </Stack.Navigator>
   );
 }
+
+
+const styles = StyleSheet.create({
+  headStyle: {
+    backgroundColor: "#ccc"
+  }
+})
