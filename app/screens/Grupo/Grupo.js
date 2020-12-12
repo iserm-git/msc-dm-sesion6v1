@@ -23,6 +23,13 @@ export default function Grupo() {
         onPress={() => navigation.navigate("grupos-add")}
       />
 
+      <Button
+        title="Detalle de grupo"
+        buttonStyle={styles.btnStyle}
+        containerStyle={styles.btnContainer}
+        onPress={() => navigation.navigate("grupos-det")}
+      />
+
     </View>
   );
 }
@@ -43,6 +50,13 @@ const styles = StyleSheet.create({
   viewBtn: {
     flex: 6,
     alignItems: "center"
-  }
+  },
+  btnStyle: {
+    backgroundColor: "#800600"
+  },
+  btnContainer: {
+    width: "70%",
+    marginBottom: 10
+  },
 });
 
