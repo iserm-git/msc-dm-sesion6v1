@@ -73,5 +73,11 @@ const styles = StyleSheet.create({
     btnContainer: {
         width: "90%",
         marginBottom: 10
+    },
+    photo: {
+        height: 240,
+        width: 240,
+        marginBottom: 20,
+        marginTop: 20
     }
 })

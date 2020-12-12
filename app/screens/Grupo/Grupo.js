@@ -1,9 +1,10 @@
 import React from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
-import { ListItem, Icon } from "react-native-elements";
+import { Button, ListItem, Icon } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native"
 
 export default function Grupo() {
-
+  const navigation = useNavigation();
   return (
     <View style={styles.viewBtn}>
       {/* source={{ uri: 'https://source.unsplash.com/daily' }} */}
@@ -15,6 +16,13 @@ export default function Grupo() {
         source={require('../../../assets/groups_people1.png')}
 
       />
+      <Button
+        title="Agregar grupo"
+        buttonStyle={styles.btnStyle}
+        containerStyle={styles.btnContainer}
+        onPress={() => navigation.navigate("grupos-add")}
+      />
+
     </View>
   );
 }
