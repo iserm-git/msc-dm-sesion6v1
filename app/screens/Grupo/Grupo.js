@@ -37,6 +37,13 @@ export default function Grupo() {
         onPress={() => navigation.navigate("grupos-list")}
       />
 
+      <Button
+        title="Lista de grupo por carrera"
+        buttonStyle={styles.btnStyle}
+        containerStyle={styles.btnContainer}
+        onPress={() => navigation.navigate("grupos-carr")}
+      />
+
     </View>
   );
 }
