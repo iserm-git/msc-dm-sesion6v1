@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "CARRANZA CAMPOS FERNANDO",
+        "noControl": "M19010892",
+        "email": "fcarranza892@accitesz.com"
+    },
+    {
+        "id": 2,
+        "name": "CHAVEZ GUERRERO YADIRA",
+        "noControl": "M08010033",
+        "email": "ychavez033@accitesz.com"
+    },
+    {
+        "id": 3,
+        "name": "GARCIA FERNANDEZ RAMON",
+        "noControl": "M12010278",
+        "email": "rgarcia278@accitesz.com"
+    },
+    {
+        "id": 4,
+        "name": "HERNANDEZ BARRERA JUAN CARLOS",
+        "noControl": "M12010278",
+        "email": "jhernandez889@accitesz.com"
+    },
+    {
+        "id": 5,
+        "name": "MORENO GATICA OSCAR DANIEL",
+        "noControl": "M12010296",
+        "email": "omoreno296@accitesz.com"
+    },
+    {
+        "id": 6,
+        "name": "NAREZ RUÍZ LUIS FERNANDO",
+        "noControl": "M11010539",
+        "email": "lnarez539@accitesz.com"
+    },
+    {
+        "id": 7,
+        "name": "VILLANUEVA MASCORT ERICK DALET",
+        "noControl": "M19010891",
+        "email": "evillanueva891@accitesz.com"
+    }
+]

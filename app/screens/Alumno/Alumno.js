@@ -38,6 +38,12 @@ export default function Alumno() {
         containerStyle={styles.btnContainer}
         onPress={() => navigation.navigate("alumnos-gpo")}
       />
+      <Button
+        title="Alumnos JSON"
+        buttonStyle={styles.btnStyle}
+        containerStyle={styles.btnContainer}
+        onPress={() => navigation.navigate("alumnos-json")}
+      />
     </View>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { View } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Maestros from "../screens/Maestro/Maestro";
 import MaestrosInfo from "../screens/Maestro/MaestroInfo";
@@ -31,5 +32,6 @@ export default function MaestroStack() {
         options={{ title: "Lista de maestros" }}
       />
     </Stack.Navigator>
+
   );
 }

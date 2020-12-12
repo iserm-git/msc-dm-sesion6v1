@@ -6,6 +6,7 @@ import AlumnosAdd from "../screens/Alumno/AlumnoAdd";
 import AlumnosDet from "../screens/Alumno/AlumnoDet";
 import AlumnosGpo from "../screens/Alumno/AlumnoGpo";
 import AlumnosList from "../screens/Alumno/AlumnoList";
+import AlumnosJson from "../screens/Alumno/AlumnoJson";
 
 
 const Stack = createStackNavigator();
@@ -45,6 +46,11 @@ export default function AlumnosStack() {
         name="alumnos-list"
         component={AlumnosList}
         options={{ title: "Lista de Alumnos" }}
+      />
+      <Stack.Screen
+        name="alumnos-json"
+        component={AlumnosJson}
+        options={{ title: "Alumnos JSON" }}
       />
     </Stack.Navigator>
   );
