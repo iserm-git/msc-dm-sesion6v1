@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, ListItem, StyleSheet, Text, View } from "react-native";
 import alumnosJson from "../../../alumnos.json"
 
 
@@ -11,6 +11,19 @@ export default function AlumnoJson() {
                 renderItem={({ item }) => <Text style={styles.item}>[{item.noControl}]{item.name}</Text>}
                 keyExtractor={item => String(item.id)}
             />
+            {/* <FlatList
+                data={alumnosJson}
+                renderItem={({ item }) => (
+                    <ListItem
+                        roundAvatar
+                        title={`${item.name} `}
+                        subtitle={item.email}
+                        avatar={{ uri: 'https://i.pravatar.cc/100' }}
+                    />
+                )}
+                keyExtractor={item => String(item.id)}
+            /> */}
+
         </View >
     );
 }
