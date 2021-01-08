@@ -4,9 +4,9 @@ import { Button } from "react-native-elements"
 
 export default function AlumnoAdd() {
 
-    const [txtNombre, setNombre] = useState('Escribe el nombre ...')
-    const [txtNoControl, setnoControl] = useState('Escribe el No. Control ...')
-    const [txtCarrera, setCarrera] = useState('Escribe la carrera ...')
+    const [txtNombre, setNombre] = useState('')
+    const [txtNoControl, setnoControl] = useState('')
+    const [txtCarrera, setCarrera] = useState('')
     const [btnEnviar, setEnviar] = useState('')
 
     return (
@@ -16,19 +16,19 @@ export default function AlumnoAdd() {
                 <Text>Nombre de alumnos</Text>
                 <TextInput
                     style={styles.input}
-                    placeholder={txtNombre}
+                    placeholder="Escribe el nombre ..."
                     onChangeText={n => setNombre(n)}
                 />
                 <Text>No de Control</Text>
                 <TextInput
                     style={styles.input}
-                    placeholder={txtNoControl}
+                    placeholder="Escribe el No. Control ..."
                     onChangeText={nc => setnoControl(nc)}
                 />
                 <Text>Carrera</Text>
                 <TextInput
                     style={styles.input}
-                    placeholder={txtCarrera}
+                    placeholder="Escribe la carrera ..."
                     onChangeText={c => setCarrera(c)}
                 />
                 <Button
