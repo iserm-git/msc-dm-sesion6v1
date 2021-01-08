@@ -2,33 +2,15 @@ import React from "react";
 import { StyleSheet, View, ScrollView, Text } from "react-native";
 import { Button, ListItem, Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
+import MaestroHeader from "../../components/Maestro/MaestroHeader";
+import MaestroMenu from "../../components/Maestro/MaestroMenu";
 
 export default function Maestro() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>Maestros</Text>
-
-      <View style={styles.viewBtn}>
-        <Button
-          title="Agregar maestro"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("maestros-add")}
-        />
-        <Button
-          title="Maestro Lista 1"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("maestros-info")}
-        />
-        <Button
-          title="Maestro Lista 2"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("maestros-list")}
-        />
-      </View>
+      <MaestroHeader />
+      <MaestroMenu />
 
       {list.map((item, i) => (
         <ListItem key={i} bottomDivider>

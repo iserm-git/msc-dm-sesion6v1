@@ -4,14 +4,14 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 
 export default function GrupoList() {
 
-    const [users, setUsers] = useState([])
+    const [grupos, setGrupos] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('http://192.168.100.7:3000/grupos')
             .then(response => response.json())
             .then(data => {
-                setUsers(data)
+                setGrupos(data)
                 setLoading(false)
             })
     }, [])
@@ -24,8 +24,8 @@ export default function GrupoList() {
     return (
         <View style={styles.container} >
             <FlatList
-                data={users}
-                renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
+                data={grupos}
+                renderItem={({ item }) => <Text style={styles.item}>{item.nomGrupo}</Text>}
                 keyExtractor={item => String(item.id)}
             />
         </View >
